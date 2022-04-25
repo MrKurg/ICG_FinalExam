@@ -44,5 +44,16 @@ void JumpBehaviour::Update(float deltaTime) {
 			ptr->IsEnabled = !ptr->IsEnabled;
 		}
 	}
+
+	_body->SetAngularFactor(glm::vec3(0.0f, 0.0f, 1.0f));
+
+	if (InputEngine::GetKeyState(GLFW_KEY_D) == ButtonState::Pressed)
+	{
+		_body->ApplyForce(glm::vec3(300.0f, 0.0f, 0.0f));
+	}
+	else if (InputEngine::GetKeyState(GLFW_KEY_A) == ButtonState::Pressed)
+	{
+		_body->ApplyForce(glm::vec3(-300.0f, 0.0f, 0.0f));
+	}
 }
 
