@@ -208,7 +208,7 @@ void DefaultSceneLayer::_CreateScene()
 		scene->SetSkyboxRotation(glm::rotate(MAT4_IDENTITY, glm::half_pi<float>(), glm::vec3(1.0f, 0.0f, 0.0f)));
 
 		// Loading in a color lookup table
-		Texture3D::Sptr lut = ResourceManager::CreateAsset<Texture3D>("luts/green.CUBE");   
+		Texture3D::Sptr lut = ResourceManager::CreateAsset<Texture3D>("luts/green.cube");   
 
 		// Configure the color correction LUT
 		scene->SetColorLUT(lut);
